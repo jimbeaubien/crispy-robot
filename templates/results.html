@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backtest Results</title>
+</head>
+<body>
+    <h1>Backtest Results</h1>
+    <h2>Results for {{ results.symbol }}</h2>
+    <ul>
+        <li>Short-term SMA Period: {{ results.sma1 }}</li>
+        <li>Long-term SMA Period: {{ results.sma2 }}</li>
+        <li>Total Return: {{ results.total_return }}%</li>
+        <li>Sharpe Ratio: {{ results.sharpe_ratio }}</li>
+        <li>Maximum Drawdown: {{ results.max_drawdown }}%</li>
+    </ul>
+    <h2>Equity Curve</h2>
+    <img src="data:image/png;base64,{{ results.plot_data }}" alt="Equity Curve">
+    <a href="/">Back to Home</a>
+</body>
+</html>
